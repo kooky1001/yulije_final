@@ -34,12 +34,12 @@
 </select>
 
 <!-- 예약번호로 의사이름 불러오기 -->
-<select id="getReservation_2" resultType="String">
+<select id="getReservation_2" resultType="java.lang.String">
 	select doc_name from doctor where doc_no in(select doc_no from reservation where reser_no = #{reser_no})
 </select>
 
 <!-- 예약번호로 진료과이름 불러오기-->
-<select id="getReservation_3" resultType="String">
+<select id="getReservation_3" resultType="java.lang.String">
 	select dept_name from Department where dept_no in(select dept_no from reservation where reser_no = #{reser_no})
 </select>
 </mapper>
